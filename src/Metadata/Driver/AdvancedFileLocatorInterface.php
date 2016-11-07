@@ -16,9 +16,21 @@
  * limitations under the License.
  */
 
-namespace Metadata;
+namespace Metadata\Driver;
 
-final class Version
+/**
+ * Forces advanced logic on a file locator.
+ *
+ * @author Jordan Stout <j@jrdn.org>
+ */
+interface AdvancedFileLocatorInterface extends FileLocatorInterface
 {
-    const VERSION = '1.1.1-DEV';
+    /**
+     * Finds all possible metadata files.
+     *
+     * @param string $extension
+     *
+     * @return array
+     */
+    public function findAllClasses($extension);
 }

@@ -16,9 +16,19 @@
  * limitations under the License.
  */
 
-namespace Metadata;
+namespace Metadata\Driver;
 
-final class Version
+/**
+ * Forces advanced logic to drivers.
+ *
+ * @author Jordan Stout <j@jrdn.org>
+ */
+interface AdvancedDriverInterface extends DriverInterface
 {
-    const VERSION = '1.1.1-DEV';
+    /**
+     * Gets all the metadata class names known to this driver.
+     *
+     * @return array
+     */
+    public function getAllClassNames();
 }

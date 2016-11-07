@@ -18,7 +18,19 @@
 
 namespace Metadata;
 
-final class Version
+/**
+ * Interface for advanced Metadata Factory implementations.
+ *
+ * @author Johannes M. Schmitt <schmittjoh@gmail.com>
+ * @author Jordan Stout <j@jrdn.org>
+ */
+interface AdvancedMetadataFactoryInterface extends MetadataFactoryInterface
 {
-    const VERSION = '1.1.1-DEV';
+    /**
+     * Gets all the possible classes.
+     *
+     * @throws \RuntimeException if driver does not an advanced driver.
+     * @return array
+     */
+    public function getAllClassNames();
 }
